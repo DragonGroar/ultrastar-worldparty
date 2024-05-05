@@ -798,7 +798,6 @@ var
   R, G, B: real;
   Col2: integer;
   ArrayStartModifier: integer;
-  AvatarPlayerTextures: UAvatars.TAvatarPlayerTextures;
 begin
   inherited Create;
 
@@ -903,7 +902,7 @@ begin
     else
       ArrayStartModifier := 0; //this should never happen
   end;
-  AvatarPlayerTextures := UAvatars.GetAvatarsList().GetPlayers();
+
   for I := 1 to PlayersPlay do
   begin
     if((Screens = 2) and (PlayersPlay > 3) and (I > Trunc(PlayersPlay/2))) then
