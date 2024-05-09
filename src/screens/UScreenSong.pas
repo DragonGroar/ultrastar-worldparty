@@ -1640,7 +1640,7 @@ begin
   Song := CatSongs.Song[Interaction];
 
   PlayMidi := false;
-  if Song.Mp3.IsSet() and AudioPlayback.Open(Song.Path.Append(Song.Mp3)) then
+  if Song.Mp3.IsSet() and AudioPlayback.OpenWithInstrum(Song.Path.Append(Song.Mp3),Song.Path.Append(Song.Instrum)) then
   begin
     PreviewOpened := Interaction;
 

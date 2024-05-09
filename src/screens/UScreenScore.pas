@@ -841,7 +841,7 @@ begin
     StaticLevel[Player]          := AddStatic(Theme.Score.StaticLevel[Player]);
     StaticLevelRound[Player]     := AddStatic(Theme.Score.StaticLevelRound[Player]);
 
-    AddButton(Theme.Score.ButtonContinue); 
+    AddButton(Theme.Score.ButtonContinue);
 
     // ######################
     // Score screen textures
@@ -1807,7 +1807,7 @@ begin
     begin
       AudioPlayback.Close;
 
-      if AudioPlayback.Open(CatSongs.Song[select].Path.Append(CatSongs.Song[select].Mp3)) then
+      if AudioPlayback.OpenWithInstrum(CatSongs.Song[select].Path.Append(CatSongs.Song[select].Mp3),CatSongs.Song[select].Path.Append(CatSongs.Song[select].Instrum)) then
       begin
         if (CatSongs.Song[select].PreviewStart > 0) then
           AudioPlayback.Position := CatSongs.Song[select].PreviewStart
